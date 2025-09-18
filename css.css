@@ -1,0 +1,839 @@
+/**
+ * file: css/css.css
+ * purpose: styling
+ **/
+
+/* Remove whitespace on top of certain browsers */
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body{
+  border-block-start-style: none;
+  max-width: fit-content;
+
+
+}
+
+html{
+  scroll-behavior: smooth
+}
+
+/* import skrifttyper */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+/* Titel */
+
+.h1{
+  font-family: "Koulen", sans-serif;
+  font-weight: 10;
+  font-style: normal;
+  color:var(--hvid);
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-family: 'Koulen', sans-serif;
+  margin: 0;
+
+}
+
+/* Lille Header */
+.h2 {
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  color: var(--sort);
+}
+
+/* Stor Header */
+.h3 {
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+/* Lille body */
+.h6 {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10rem;
+}
+ 
+/* Stor body */
+.storbody {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+ 
+
+/* Variable: farver, mv. */
+:root {
+
+  /* farver */
+  --hvid: #ffffff; /* helt hvid */
+  --knekkethvid: #fffcf7; /* baggrundsfarve */
+  --granitgrøn: #adc3b9;
+  --babypink: #ffe2f9; /* knapper og logo */
+  --støvetlilla: #d8cbe7;
+  --sand: #f0e3ca;
+  --earthbrown: #3a2a1f;
+  --sort: #000000;
+  --mørkegrå: #5a5a5a; /* footer */
+}
+
+.topNav{
+
+
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background:transparent;
+ padding: 15px 0;
+ z-index: 1000;
+
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.topNav ul{
+  list-style: none;
+  display: flex;
+  justify-content: left;
+  gap: 5px;
+  font-family: "Comfortaa", sans-serif;
+}
+
+.topNav .nav-venstre a{
+  transition: background-color 0.3s, color 0.3s;
+
+  margin: 25px;
+  color: var(--sort);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+
+  border-style: outset;
+  padding: 10px;
+  border-radius: 10px;
+  border-color: var(--mørkegrå);
+  border-width: 1px;
+}
+
+.topNav .nav-venstre a:last-child{
+  margin-right: 0;
+}
+
+.topNav .nav-venstre a:hover{
+  transform: translateY(-3px);
+  
+  color: var(--mørkegrå);
+  text-decoration: none;
+  border-style: outset;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--babypink);
+  border-color: var(--støvetlilla);
+  border-width: 1px;
+}
+
+.topNav .nav-midten{
+  margin-right: 160px;
+}
+.topNav .nav-højre{
+  list-style-type: none;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--hvid);
+  margin-right: 20px;
+
+  background-color: rgba(255,255,255,0.6);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+section{
+  margin-top: 80px;
+}
+
+
+
+/* Herobillede style */
+
+.herotekst h1 .bold{
+  color: var(--hvid);
+  font-size: 4rem;
+  font-family: "Koulen", sans-serif;
+}
+
+.herotekst h1 .highlight {
+  color: var(--babypink);
+  margin-left: 1px;
+  font-size: 4rem;
+  font-family: "Koulen", sans-serif;
+}
+
+h2{
+  color:var(--hvid);
+  font-family: instrument sans, sans-serif;
+  font-size: 1,5rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+
+header{
+  list-style-type: none;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+
+
+  /* Læg teksten i midten vertikalt og horisontalt */
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: x-large;
+}
+
+.hero{
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.hero img{
+  width: 100%;
+  max-height: 960px;
+  min-width: 1440px;
+  display: flex;
+}
+
+.herotekst{
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  transform: translateY(-30%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* køb nu knap */
+.btn{
+  
+  display: inline-block;
+  padding: 5px 20px;
+  border-style: groove;
+  border-width: 1px;
+  border-radius: 15px;
+  border-color: var(--hvid);
+  color: var(--hvid);
+  text-decoration: none;
+  font-weight: 500;
+  background: transparent;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover{
+  background-color:var(--babypink);
+  color: var(--mørkegrå);
+   border-style: outset;
+     border-style: outset;
+  border-color: var(--støvetlilla);
+  border-radius: 15px;
+  transform: translateY(-3px);
+}
+
+.trustpilot img{
+  max-width: 200px;
+  height:auto;
+  display: flex;
+  position: relative;
+  bottom: 140px;
+}
+
+.trustpilot :hover{
+  transform: translateY(-2px);
+}
+
+/* Her kommer section med farveudvalget */
+
+ /* ---------- Layout ---------- */
+.produkt-container {
+  display: flex;            /* venstre og højre ved siden af hinanden */
+  gap: 2rem;                /* afstand mellem venstre og højre */
+  justify-content: center;
+  }
+
+/* ---------- Venstre side ---------- */
+.alle-farver img {
+  height: auto;
+}
+
+/* ---------- Højre side ---------- */
+.produktfarver {
+  position: relative;   /* gør det muligt at placere ikoner absolut */
+  display: inline-block;
+  text-align: center;   /* centrer tekst under højtaleren */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 10px 30px;
+}
+
+.pinkspeaker img {
+  width: 200px;   /* højtaleren */
+  height: auto;
+}
+
+/* ---------- Ikoner (hjerte + kurv) ---------- */
+.tomthjerte img,
+.fyldthjerte img,
+.lillekurv img {
+  width: 30px;
+  height: auto;
+}
+
+/* placering ovenpå højtaler */
+.tomthjerte {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.fyldthjerte {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+}
+
+.lillekurv {
+}
+
+/* ---------- Farvecirkler ---------- */
+.farvecirkler {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start; /* centrer under højtaleren */
+  margin-top: 1rem;
+}
+
+.farvecirkler img {
+  width: 25px;
+  height: auto;
+  cursor: pointer; /* gør dem klikbare */
+}
+
+.tomthjerte img {
+  width: 30px;
+  height: auto;
+  transition: 0.3s; /* giver en glidende effekt */
+}
+
+/* når man holder musen over */
+.tomthjerte img:hover {
+content: url("images/fyldthjerte.svg"); /* skifter billedet */
+}
+
+
+
+
+/* damehånd */
+.hand{
+  background: #fdf9f4;
+  display: inline-block;
+  justify-content: auto;
+  align-items: flex-start; 
+  position: relative;
+}
+.handbillede{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.handtekst{
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  max-width: 35%;
+  color: black;
+}
+
+.handtekst h3{
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.handtekst .handtekstet{
+  font-size: 3.5rem;
+  display: block;
+  font-weight: bold;
+  color: black;
+}
+
+.handtekst .handtekstto{
+  font-size: 3rem;
+  display: block;
+  font-weight: bold;
+  color: white;
+  /* forskudt til højre */
+  margin-left: 7rem;
+}
+
+.handtekst h6{
+  font-size: 1.5rem;
+  font-family: "Comfortaa", sans-serif;
+}
+
+
+.pinkspeaker{
+  justify-content: center;
+  display: block;
+ 
+}
+
+
+ 
+      
+
+
+
+
+
+/* Her kommer section med farveudvalgt */
+.allefarver h3{
+ font-family: "Koulen", sans-serif;
+ justify-content: center;
+ position: relative;
+}
+
+.allefarver img{
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  min-width: 800px;
+ max-width: 1440px;
+ margin-top: 50px;
+}
+
+.allefarverbillede{
+  display:flex;
+  justify-content: left;
+}
+
+
+
+.lillaspeaker{
+  width: 50%;
+  height:auto;
+  display: block;
+}
+
+/*alle farver + produktbillede og koeb*/
+
+
+
+/* overskrift "18 timers spilletid" style */
+.time h3{
+  font-family: "Koulen", sans-serif;
+  color: var(--hvid);
+  position: absolute;
+  top: 120px;
+  left: 45%;
+  transform: translate(-50%,-50%);
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+}
+.time{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 1440px;
+}
+.time img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.time .offset{
+  display: inline-block;
+  margin-left: 30px;
+}
+
+/* egenskaber + hot on socials */
+.produkt-sektion {
+  font-family: Arial, sans-serif;
+  background: #fdf9f4;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  /* så kortene starter samme højde */
+  gap: 20px;
+  padding: 40px;           
+  /* lidt luft rundt om */
+}
+
+/* Venstre kort */
+
+.social-card {
+
+  background: var(--hvid);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: fit-content;
+  max-width: 350px;
+}
+
+.social-card h2 {
+ color: var(--sort);
+ margin-bottom: 10px;
+ margin-top: 10px;
+}
+
+/* Hoejre kort */
+.card {
+  background: #faf7f2;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  width: 100%;
+  max-width: 500px;
+
+  box-sizing: border-box; /* inkluderer padding i width */
+}
+
+.card h2 {
+color: var(--sort);
+font-size: 1.4rem;
+font-weight: normal;
+margin-bottom: 24px;  /* kun margin, ikke padding */
+}
+
+.features {
+ display: flex;
+  justify-content: space-between; /* jævnt mellemrum */
+  gap: 10px;
+  margin: 20px 0;
+  width: 100%;           /* fylder hele kortets indvendige bredde */
+  box-sizing: border-box; /* inkluderer padding/gap */
+  flex-wrap: nowrap;      /* tvinger alle på én række */
+}
+
+.battery, .bluetooth, .connect, .db {
+  flex: 0 0 60px;
+  height: 60px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 3px 3px 3px rgb(90, 117, 113);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.battery img,
+.bluetooth img,
+.connect img,
+.db img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+/* Sikrer at billeder passer i boksen */
+.features img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+/* Opdag-knap */
+.opdag-knap {
+  opacity:0.7;
+   
+    
+}
+
+.opdag-knap{
+  border-style: outset;
+    border-width: 0.5px;
+    border-color: var(--sort);
+    margin: 30px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.opdag-knap:hover{
+opacity:1;
+background-color: var(--babypink);
+
+}
+
+.opdag-background {
+   background: url("/images/pinkpensel.svg") no-repeat center;
+   height: 100px;
+   padding-top: 16px;
+}
+
+.more {
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  
+}
+
+.read-more {
+  opacity:0.7;
+
+  border-style: outset;
+    border-width: 0.5px;
+    border-color: var(--sort);
+    margin: 30px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+.read-more:hover {
+opacity:1;
+background-color: var(--babypink);
+}
+
+.feature-text {
+  margin-top: 8px;
+}
+
+/* 360 musikoplevelse */
+.hylde{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 6rem;
+  gap: 4rem;
+}
+.hylde-tekst{
+  flex: 1;
+  max-width: 40%;
+}
+
+.hylde-tekst h3{
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.hylde-tekst h6{
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-family: "Comfortaa", sans-serif;
+}
+
+.guide-knap{
+  display: inline-block;
+  background: url('brush.png') no-repeat center center;
+  background-size: contain;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-family: "Comfortaa", sans-serif;
+  border-style: outset;
+  border-width: 0.5px;
+  border-radius: 10px;
+}
+
+.guide-knap:hover{
+  background-color: var(--babypink);
+  transform: translateY(-3px);
+  color: var(--hvid);
+}
+
+.hylde-billede{
+  flex: 1;
+  max-width: 60%;
+}
+
+
+
+
+h5{
+  color: white;
+  font-size: 2rem;
+  font-family: "instrument sans", sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p{
+  color: white;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Define variables in the :root */
+ 
+
+/* Use your variables on elements along these lines */
+/*
+:root {
+  --contrast: lime;
+  --backgr: #000;
+}
+
+--- You can use the variables like this ---
+
+ main {
+   color: var(--contrast);
+   background-color: var(--backgr);
+ }
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+  background-color:var(--mørkegrå)
+}
+.footer-logo{
+  display: inline-block;
+  max-width: 200px;
+
+  
+}
+
+
+
+
+/* Mobile enheder */
+@media (max-width: 600px){
+  body
+   {background-color: var(--knekkethvid);
+    display:block;
+   }}
+
+/* Tablets og Ipads */
+@media (min-width: 601px) and (max-midth: 1024px) {
+  body
+   {background-color: var(--knekkethvid);
+    display:block;
+   }
+}
+
+
+/* Her er siden for "buynow.html */
+
+.buynowside{
+  display: flex;
+}
+
+.enkeltvisning{
+display: flex;
+}
+
+.produktudvalg{
+  display: flex;
+  margin-left: 100px;
+}
+
+/* Her er decoration af footer */
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--mørkegrå);
+  padding: 40px;
+  color: var(--hvid);
+}
+
+.footer-kol{
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-kol h5{
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-kol p{
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.social-ikoner{
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  
+}
+
+.omlumina{
+  border-style: outset;
+  padding: 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--hvid);
+}
+
+.virksomheden .omlumina a:hover{
+  border-style: outset;
+  padding: 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--hvid);
+  border-color: var(--babypink);
+}
+
+/* Her er omlumina.html */
+
+.omluminafoto{
+  display: flex;
+  justify-content: center;
+  min-width: 1400px;
+  
+}
